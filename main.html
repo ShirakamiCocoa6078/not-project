@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genshin Damage Checker</title>
+    <script src="jquery-latest.min.js"></script>
+    <script src="jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="jquery.bxslider.min.css">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="main.js?ver=1.0"></script>
 </head>
 <body>
-    
+    <p>
+        <select name='character'id='character'>
+            <option value='lumine'>여행자</option>
+            <option value='lisa'>리사</option>
+            <!--여기부터 각각 플레이어블 캐릭터를 넣어야함-->
+        </select>
+    </p>
+    <p>
+        <select name='weapon' id='weapon'>
+            <!-- 한손검 : onehand, 양손검 : twohand, 활 : bow, 창 : speare -->
+            <option value=''>무인검</option>
+            <option value=''>학도의 노트</option>
+            <!--무기를 종류별로 다 넣어주자.(한손검 양손검 활 법구 창도 자동으로 분류해야함)-->
+        </select>
+        <select name='weaponLevel' id='weaponLevel'>
+            <option value='WL1'>무기 1레벨</option>
+            <option value='WL20'>무기 20레벨</option>
+            <option value='WL40'>무기 40레벨</option>
+            <option value='WL50'>무기 50레벨</option>
+            <option value='WL60'>무기 60레벨</option>
+            <option value='WL70'>무기 70레벨</option>
+        </select>
+        <select name='weaponBreak' id='weaponBreak'>
+            <option value='none'>돌파하지 않음</option>
+            <option value='B1'>무기 1돌파</option>
+            <option value='B2'>무기 2돌파</option>
+            <option value='B3'>무기 3돌파</option>
+            <option value='B4'>무기 4돌파</option>
+        </select>
+    </p>
+    <p>
+        <label for='HP'>HP</label> <input type="number" name="HP" id='HP' min=0 value=0>
+    </p>
+    <p>
+        <label for='ATK'>공격력</label> <input type='number' name='ATK' id='ATK' min=0 value=0>
+    </p>
 </body>
 </html>
