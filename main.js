@@ -21,7 +21,8 @@ function characterChanged() { //캐릭터 변경시
         document.getElementById(ElementList[i]).selectedIndex = 0 //모든 요소의 선택된 값 초기화
         if(characterSelectedClass != 0){ //만약 인덱스 0번을 선택하지 않았다면
             if(i>=5){ //i가 5이상(리스트의 인덱스 값이 5이상만)
-                document.getElementById(ElementList[i]).options.hidden = true //특성 요소들을 전부 hidden 해금
+                [...document.getElementById(ElementList[i])].forEach(ele => ele.hidden = false) //특성 요소들을 전부 hidden 해금
+                //document.getElementById(ElementList[i]).options.hidden = false
             }
         }
     }
