@@ -5,7 +5,7 @@ function characterChanged() {
     const characterElement = document.getElementById('character')
     const selectedClass = characterElement.options[characterElement.selectedIndex].value
     for (let i = 1; i < options.length; i++) {
-        options[i].hidden = options[i].value != selectedClass
+        options[i].hidden = !options[i].value.includes(selectedClass)
     }
 }
 
@@ -17,7 +17,7 @@ function changeWeapon(){
     const selectedClass = weaponElement.options[weaponElement.selectedIndex].value
     for(let i = 1; i< options.length; i++){
         if(selectedClass[selectedClass.length-1].match(/1|2/)){
-            options[i].hidden = i <= 6
+            options[i].hidden = i >= 7
         }else{
             {}
         }
