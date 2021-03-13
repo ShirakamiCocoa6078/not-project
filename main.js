@@ -8,15 +8,25 @@ const ElementList = [
     'talents2',
     'talents3'
 ]
+const ElementList2 = [
+    'HP',
+    'ATK',
+    'DEF',
+    'EM'
+]
 function characterChanged() { //캐릭터 변경시
     const characterLevelOptions = document.getElementById('characterLevel').options
     const characterSelectedClass = document.getElementById('character').selectedIndex
-    for(let i = 1; i < ElementList.length; i++){
+    for(let i = 0; i < ElementList.length-1; i++){
         document.getElementById(ElementList[i]).selectedIndex = 0
+        if(i <= 3){
+            //document.getElementById(ElementList2[i]).value = 0
+        }
     }
     for(let i = 1; i < characterLevelOptions.length; i++){
         if(characterSelectedClass != 0){
             characterLevelOptions[i].hidden = false
+            ElementList[i].hidden = 2 <= i <= 3
         }else{
             characterLevelOptions[i].hidden = i != 0
         }
