@@ -16,7 +16,7 @@ function changeWeapon(){
     const weaponElement = document.getElementById('weapon')
     const selectedClass = weaponElement.options[weaponElement.selectedIndex].value
     for(let i = 1; i< options.length; i++){
-        if(selectedClass[-1].match(/1|2/)){
+        if(selectedClass[selectedClass.length-1].match(/1|2/)){
             options[i].hidden = i <= 6
         }else{
             {}
