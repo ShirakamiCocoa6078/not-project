@@ -39,25 +39,24 @@ function changeLevel(){
                 options[i].hidden = i != 1
                 break
             case 'WL20':
-                options[i].hidden = i != 1 || i != 2 
+                options[i].hidden = ![1,2].includes(i) 
                 break
             case 'WL40':
-                options[i].hidden = i != 2 || i != 3
+                options[i].hidden = ![2,3].includes(i) 
                 break
             case 'WL50':
-                options[i].hidden = i != 3 || i != 4
+                options[i].hidden = ![3,4].includes(i) 
                 break
             case 'WL60':
-                options[i].hidden = i != 4 || i != 5
+                options[i].hidden = ![4,5].includes(i) 
                 break
             case 'WL70':
-                options[i].hidden = i != 5 || i != 6
+                options[i].hidden = ![5,6].includes(i) 
             case 'WL80':
-                options[i].hidden = i != 6 || i != 7
+                options[i].hidden = ![6,7].includes(i) 
                 break
             case 'WL90':
                 options[i].hidden = i != 7
-                break
         }
     }
 
