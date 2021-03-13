@@ -23,7 +23,44 @@ function changeWeapon(){
         }
     }
 }
+function changeCLevel(){
+    const options = document.getElementById('characterBreak')
+    document.getElementById('characterBreak').selectedIndex = 0
 
+    const characterElement = document.getElementById('characterLevel')
+    const selectedClass = characterElement.options[characterElement.selectedIndex].value
+    for(let i = 1;i < options.length; i++){
+        if(i===0){
+            options[i].hidden = i != 0
+            continue
+        }
+        switch(selectedClass){
+            case 'C1':
+                options[i].hidden = i != 1
+                break
+            case 'C20':
+                options[i].hidden = ![1,2].includes(i) 
+                break
+            case 'C40':
+                options[i].hidden = ![2,3].includes(i) 
+                break
+            case 'C50':
+                options[i].hidden = ![3,4].includes(i) 
+                break
+            case 'C60':
+                options[i].hidden = ![4,5].includes(i) 
+                break
+            case 'C70':
+                options[i].hidden = ![5,6].includes(i)
+                break
+            case 'C80':
+                options[i].hidden = ![6,7].includes(i) 
+                break
+            case 'C90':
+                options[i].hidden = i != 7
+        }
+    }
+}
 function changeLevel(){
     const options = document.getElementById('weaponBreak')
     document.getElementById('weaponBreak').selectedIndex = 0
@@ -32,6 +69,7 @@ function changeLevel(){
     const selectedClass = weaponBElement.options[weaponBElement.selectedIndex].value
     for(let i = 1; i < options.length; i++){
         if(i===0){
+            options[i].hidden = i != 0
             continue
         }
         switch(selectedClass){
@@ -52,6 +90,7 @@ function changeLevel(){
                 break
             case 'WL70':
                 options[i].hidden = ![5,6].includes(i) 
+                break
             case 'WL80':
                 options[i].hidden = ![6,7].includes(i) 
                 break
@@ -59,5 +98,6 @@ function changeLevel(){
                 options[i].hidden = i != 7
         }
     }
-
 }
+
+//$('.stats').delegate()

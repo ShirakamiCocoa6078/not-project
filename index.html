@@ -47,6 +47,27 @@
             <option value='bow'>타르탈리아</option>
             <option value='bow'>감우</option>
         </select>
+        <select name='characterLevel' id='characterLevel' onchange='changeCLevel();'>
+            <option value='default' selected>==캐릭터의 레벨을 선택해주세요==</option>
+            <option value='C1'>1레벨</option>
+            <option value='C20'>20레벨</option>
+            <option value='C40'>40레벨</option>
+            <option value='C50'>50레벨</option>
+            <option value='C60'>60레벨</option>
+            <option value='C70'>70레벨</option>
+            <option value='C80'>80레벨</option>
+            <option value='C90'>90레벨</option>
+        </select>
+        <select name='characterBreak' id='characterBreak'>
+            <option value='default'>==캐릭터 돌파 횟수를 선택해주세요==</option>
+            <option value='none'>돌파하지 않음</option>
+            <option value='B1'>1돌파</option>
+            <option value='B2'>2돌파</option>
+            <option value='B3'>3돌파</option>
+            <option value='B4'>4돌파</option>
+            <option value='B5'>5돌파</option>
+            <option value='B6'>6돌파</option>
+        </select>
     </p>
     <p>
         <select name='weapon' id='weapon' onchange="changeWeapon();">
@@ -180,11 +201,32 @@
             <option value='B6'>무기 6돌파</option>
         </select>
     </p>
-    <p>
-        <label for='HP'>HP</label> <input type="number" name="HP" id='HP' min=0 value=0>
-    </p>
-    <p>
-        <label for='ATK'>공격력</label> <input type='number' name='ATK' id='ATK' min=0 value=0>
-    </p>
+    <div class='stats'>
+        <span class='mainStats'>
+            <p>
+                <label for='HP' id='HP'>HP</label> <input type="number" name="HP" id='HP' min=0 value=0>
+            </p>
+            <p>
+                <label for='ATK' id='ATK'>공격력</label> <input type='number' name='ATK' id='ATK' min=0 value=0>
+            </p>
+            <p>
+                <label for='DEF' id='DEF'>방어력</label> <input type='number' name='DEF' id='DEF' min=0 value=0>
+            </p>
+            <p>
+                <label for='EM' id='EM'>원소 마스터리</label> <input type='number' name='EM' id='EM' min=0 value=0>
+            </p>
+        </span>
+        <span class='talentsLevel'>
+            <select name='talents1' id='talents1'>
+                <option value='default'>==일반 공격 레벨을 선택해주세요==</option>
+            </select>
+            <select name='talents2' id='talents2'>
+                <option value='default'>==원소 스킬 레벨을 선택해주세요==</option>
+            </select>
+            <select name='talents3' id='talents3'>
+                <option value='default'>==원소 폭발 레벨을 선택해주세요==</option>
+            </select>
+        </span>
+    </div>
 </body>
 </html>
