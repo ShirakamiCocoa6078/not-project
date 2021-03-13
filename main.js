@@ -17,7 +17,7 @@ const ElementList2 = [
 function characterChanged() { //캐릭터 변경시
     const characterLevelOptions = document.getElementById('characterLevel').options //캐릭터 레벨
     const characterSelectedClass = document.getElementById('character').selectedIndex//현재 선택한 캐릭터의 인덱스 값
-    for(let i = 0; i < ElementList.length-1; i++){
+    for(let i = 0; i < ElementList.length; i++){
         document.getElementById(ElementList[i]).selectedIndex = 0 //모든 요소의 선택된 값 초기화
         if(characterSelectedClass != 0){ //만약 인덱스 0번을 선택하지 않았다면
             if(i>=5){ //i가 5이상(리스트의 인덱스 값이 5이상만)
