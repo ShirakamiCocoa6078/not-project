@@ -135,4 +135,8 @@ function changeLevel(){//무기 레벨 변경시
     }
 }
 
-//$('.stats').delegate()
+var artifactsBanner = $(".artifactsSlider").bxSlider({
+    auto:false,
+    slideWidth: 600,
+    slineHeight: 50
+})
