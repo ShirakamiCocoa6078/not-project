@@ -14,7 +14,8 @@
 <body>
     <div>
         <span id='input'>
-            <p>
+            <div>
+                <div>캐릭터ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ캐릭터 레벨ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ캐릭터 돌파</div>
                 <select name='character'id='character' onchange="characterChanged()">
                     <option value='default' selected>==캐릭터를 선택해주세요==</option>
                     <option value='sword'>여행자</option>
@@ -70,8 +71,9 @@
                     <option value='B5' hidden>5돌파</option>
                     <option value='B6' hidden>6돌파</option>
                 </select>
-            </p>
-            <p>
+            </div>
+            <div>
+                <div>무기ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ무기 레벨ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ무기 돌파</div>
                 <select name='weapon' id='weapon' onchange="changeWeapon();">
                     <!-- 한손검 : sword, 양손검 : claymore, 법구 : catalyst, 활 : bow, 창 : polearm -->
                     <option value='default' selected>==무기를 선택해주세요==</option>
@@ -202,24 +204,29 @@
                     <option value='B5' hidden>무기 5돌파</option>
                     <option value='B6' hidden>무기 6돌파</option>
                 </select>
-            </p>
+            </div>
             <div class='stats'>
                 <span class='mainStats' style="float:left">
-                    <p>
-                        <label for='HP' id='HP'>HP</label> <input type="number" name="HP" id='HP' min=0 value=0>
-                    </p>
-                    <p>
-                        <label for='ATK' id='ATK'>공격력</label> <input type='number' name='ATK' id='ATK' min=0 value=0>
-                    </p>
-                    <p>
-                        <label for='DEF' id='DEF'>방어력</label> <input type='number' name='DEF' id='DEF' min=0 value=0>
-                    </p>
-                    <p>
-                        <label for='EM' id='EM'>원소 마스터리</label> <input type='number' name='EM' id='EM' min=0 value=0>
-                    </p>
+                    <div>
+                        <p>HP</p>
+                        <label for='HP' id='HP'></label> <input type="number" name="HP" id='HP' min=0 value=0>
+                    </div>
+                    <div>
+                        <p>공격력</p>
+                        <label for='ATK' id='ATK'></label> <input type='number' name='ATK' id='ATK' min=0 value=0>
+                    </div>
+                    <div>
+                        <p>방어력</p>
+                        <label for='DEF' id='DEF'></label> <input type='number' name='DEF' id='DEF' min=0 value=0>
+                    </div>
+                    <div>
+                        <p>원소 마스터리</p>
+                        <label for='EM' id='EM'></label> <input type='number' name='EM' id='EM' min=0 value=0>
+                    </div>
                 </span>
                 <span class='talentsLevel' style="float:left">
                     <p>
+                        <p>일반공격</p>
                         <select name='talents1' id='talents1'>
                             <option value='default'>==일반 공격 레벨을 선택해주세요==</option>
                             <option value='L1' hidden>1레벨</option>
@@ -237,6 +244,7 @@
                         </select>
                     </p>
                     <p>
+                        <p>원소스킬</p>
                         <select name='talents2' id='talents2'>
                             <option value='default'>==원소 스킬 레벨을 선택해주세요==</option>
                             <option value='L1' hidden>1레벨</option>
@@ -255,6 +263,7 @@
                         </select>
                     </p>
                     <p>
+                        <p>원소폭발</p>
                         <select name='talents3' id='talents3'>
                             <option value='default'>==원소 폭발 레벨을 선택해주세요==</option>
                             <option value='L1' hidden>1레벨</option>
@@ -276,13 +285,17 @@
             </div>
         </span>
     </div>
-    <ul class='artifactsSlider'>
-        <li><img src='1.png'></li>
-        <li><img src='2.png'></li>
-        <li><img src='3.png'></li>
-        <li><img src='4.png'></li>
-        <li><img src='5.png'></li>
-    </ul>
+    <div>
+        <!--
+        <ul class='artifactsSlider'>
+            <li><img src='1.png'></li>
+            <li><img src='2.png'></li>
+            <li><img src='3.png'></li>
+            <li><img src='4.png'></li>
+            <li><img src='5.png'></li>
+        </ul>
+        -->
+    </div>
     <div>
         <span id='output'>
             <!--여기서부터 출력이 되게 만들기-->
