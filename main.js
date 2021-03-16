@@ -61,7 +61,7 @@ function changeWeapon(){//무기 변경시
             options[i].hidden = false //아니면 전부 hidden 해금
         }
     }
-}//244.399974593246321499
+}
 function changeCLevel(){//캐릭터 레벨 변경시
     const options = document.getElementById('characterBreak')//캐릭터 돌파
     document.getElementById('characterBreak').selectedIndex = 0 //캐릭터 돌파 선택창 초기화
