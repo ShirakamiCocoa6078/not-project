@@ -69,27 +69,27 @@ function changeCLevel(){//캐릭터 레벨 변경시
     const characterElement = document.getElementById('characterLevel') //캐릭터 레벨
     const selectedClass = characterElement.options[characterElement.selectedIndex].value //선택한 캐릭터 레벨의 value값
     for(let i = 1;i < options.length; i++){
-        switch(selectedClass){ 
+        switch(selectedClass){
             case 'C1':
                 options[i].hidden = i != 1
                 break
             case 'C20':
-                options[i].hidden = ![1,2].includes(i) 
+                options[i].hidden = ![1,2].includes(i)
                 break
             case 'C40':
-                options[i].hidden = ![2,3].includes(i) 
+                options[i].hidden = ![2,3].includes(i)
                 break
             case 'C50':
-                options[i].hidden = ![3,4].includes(i) 
+                options[i].hidden = ![3,4].includes(i)
                 break
             case 'C60':
-                options[i].hidden = ![4,5].includes(i) 
+                options[i].hidden = ![4,5].includes(i)
                 break
             case 'C70':
                 options[i].hidden = ![5,6].includes(i)
                 break
             case 'C80':
-                options[i].hidden = ![6,7].includes(i) 
+                options[i].hidden = ![6,7].includes(i)
                 break
             case 'C90':
                 options[i].hidden = i != 7
@@ -112,22 +112,22 @@ function changeLevel(){//무기 레벨 변경시
                 options[i].hidden = i != 1
                 break
             case 'WL20':
-                options[i].hidden = ![1,2].includes(i) 
+                options[i].hidden = ![1,2].includes(i)
                 break
             case 'WL40':
-                options[i].hidden = ![2,3].includes(i) 
+                options[i].hidden = ![2,3].includes(i)
                 break
             case 'WL50':
-                options[i].hidden = ![3,4].includes(i) 
+                options[i].hidden = ![3,4].includes(i)
                 break
             case 'WL60':
-                options[i].hidden = ![4,5].includes(i) 
+                options[i].hidden = ![4,5].includes(i)
                 break
             case 'WL70':
-                options[i].hidden = ![5,6].includes(i) 
+                options[i].hidden = ![5,6].includes(i)
                 break
             case 'WL80':
-                options[i].hidden = ![6,7].includes(i) 
+                options[i].hidden = ![6,7].includes(i)
                 break
             case 'WL90':
                 options[i].hidden = i != 7
